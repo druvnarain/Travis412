@@ -24,6 +24,12 @@ public class SimpleCalculatorTest {
 		assertEquals(calc.divide(4, 2), 2);
 	}
 	
+	@Test(expected = ArithmeticException.class)  
+	public void testDivideByZero() {
+		SimpleCalculator calc = new SimpleCalculator();
+		calc.divide(4, 0);
+	}
+	
 	@Test
 	public void testMultiply() {
 		SimpleCalculator calc = new SimpleCalculator();
